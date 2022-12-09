@@ -16,9 +16,19 @@ The function should:
 */
 
 
-function createMenuItem(/*Your code here*/){
-  /*Your code here*/
-}
+function createMenuItem(newName,NewPrice,NewCategory){
+const food = {
+  name: newName,
+  price: NewPrice,
+  category: NewCategory,
+  }
+  return food
+};
+console.log(createMenuItem("Tacos", "8", "Lunch"))
+console.log(createMenuItem("Hard Taco", "7", "Lunch"))
+console.log(createMenuItem("Nachos", "4", "Lunch"))   
+ 
+
 
 
 
@@ -50,10 +60,23 @@ Using the burger object below do the following:
 const burger = {
   name: "Burger", 
   price: 18, 
-  category: "Lunch", 
+  category: "Lunch",
+  discount: function(prices) {
+    if(prices === "teacher") {
+      return 13.5 
+    }
+    if (prices === "student") {
+      return 13.5
+    }
+    if (prices === "public") {
+      return 16.2
+    }
+
+    return this.price 
+  }
   
 }
-
+console.log(burger.discount("student"))
 
 
 ///////////////Reviews (MVP)///////////////////
@@ -72,6 +95,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
+
 
 
 
@@ -95,7 +119,7 @@ Use the addReview function below to do the following:
 */
 
 
-function addReview(/*Your Code Here */){
+  function ( /*Your Code Here */) {
   /*Your Code Here */
 }
 
